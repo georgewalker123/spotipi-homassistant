@@ -1,5 +1,5 @@
 [Unit]
-Description=Spotipi web service
+Description=Spotipi homeassistant service
 
 [Service]
 StandardOutput=syslog

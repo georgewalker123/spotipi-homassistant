@@ -4,7 +4,7 @@ echo "Installing spotipy library:"
 pip3 install spotipy --upgrade
 
 echo "Installing flask library:"
-pip3 install flask --upgrade
+pip3 install paho-mqtt --upgrade
 
 echo "Enter your Spotify Client ID:"
 read spotify_client_id
@@ -64,7 +64,7 @@ echo "...done"
 
 echo "Creating spotipi-client service:"
 sudo cp ./config/spotipi-client.service /etc/systemd/system/
-sudo sed -i -e "/\[Service\]/a ExecStart=python3 ${install_path}/python/client/app.py &" /etc/systemd/system/spotipi-client.service
+sudo sed -i -e "/\[Service\]/a ExecStart=python3 ${install_path}/python/client/spotipi-mqqt.py &" /etc/systemd/system/spotipi-client.service
 sudo systemctl daemon-reload
 sudo systemctl start spotipi-client
 sudo systemctl enable spotipi-client
