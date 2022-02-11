@@ -51,7 +51,6 @@ def handle_brightness():
     width = int(config['DEFAULT']['rows'])
     height = int(config['DEFAULT']['columns'])
     power = config['DEFAULT']['power']
-    print(1)
     with open(filename, 'w') as configfile:
         config.write(configfile)
     job = manager.RestartUnit('spotipi.service', 'fail')
