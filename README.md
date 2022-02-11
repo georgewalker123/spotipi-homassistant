@@ -24,8 +24,10 @@ bash generate-token.sh
 scp .cache-<username> pi@spotipy.local:/home/pi
 ```
 * On the Raspberry Pi, setup the LED-Matrix, following [the guide provided by the rpi-led-matrix project](https://github.com/hzeller/rpi-rgb-led-matrix) if you are using an adafruit hat, also have a look at [their guide](https://learn.adafruit.com/adafruit-rgb-matrix-plus-real-time-clock-hat-for-raspberry-pi)
+```
 * Set up pyhton3 bindings following [this guide](https://github.com/hzeller/rpi-rgb-led-matrix/blob/a93acf26990ad6794184ed8c9487ab2a5c39cd28/bindings/python/README.md). Confirm it working by executing one of the [python samples](
 rpi-rgb-led-matrix/bindings/python/samples/)
+```
 * Clone the spotipi repository to your raspberrypi
 ```
 git clone https://github.com/frod0r/spotipi-homeassistant.git
@@ -39,4 +41,10 @@ mv <path_to_cache_file> <path_to_cloned_repository>
 cd spotipi
 sudo ./setup.sh
 ```
-* Set up mqtt in home assistant if you haven't already and let it discover your smart led martix
+* Edit settings on the web app: <br />
+```
+navigate to http://<raspberrypi_hostname or ip_address> within a web browser
+```
+
+### Final Product
+![](https://i.redd.it/8s1cxqo5jfk51.jpg)
