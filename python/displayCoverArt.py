@@ -38,7 +38,7 @@ if len(sys.argv) > 2:
     options.hardware_mapping = config['DEFAULT']['hardware_mapping']
     options.gpio_slowdown = int(config['DEFAULT']['gpio_slowdown'])
     options.brightness = int(config['DEFAULT']['brightness'])
-    #options.limit_refresh_rate_hz = int(config['DEFAULT']['refresh_rate'])
+    options.limit_refresh_rate_hz = int(config['DEFAULT']['refresh_rate'])
 
     default_image = os.path.join(dir, config['DEFAULT']['default_image'])
     print(default_image)
