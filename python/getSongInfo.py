@@ -13,14 +13,14 @@ def getSongInfo(username, token_path):
   if token:
       sp = spotipy.Spotify(auth=token)
       result = sp.current_user_playing_track()
-    
+
       if result is None:
          print("No song playing")
-      else:  
+      else:
         song = result["item"]["name"]
         imageURL = result["item"]["album"]["images"][0]["url"]
-        return [song, imageURL]
+        isplaying = result['is_playing']
+        return [song, imageURL, isplaying]
   else:
       print("Can't get token for", username)
       return None
-  
